@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+:root {
+    --transition: all 0.7s ease;
+    --clear: #FFD700;
+    --dark: #800020;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(#0b3c5d80, #0b3c5d4d), url("../images/puente.jpg") center/cover no-repeat;
+}
+
+button {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 140px;
+    display: block;
+    margin: 15px auto;
+    cursor: pointer;
+    transition: var(--transition);
+    background: var(--clear);
+    color: #fff;
+}
+
+button {
+    opacity: 0.85;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 8px 0;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+@media(max-width: 500px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* header */
+
+.header {
+    min-height: 10vh;
+    color: #fff;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+
+.head-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media(max-width: 500px) {
+    .head-btn {
+        font-size: 17px;
+    }
+    .head-bottom h2 {
+        font-size: 28px;
+    }
+    .head-bottom p {
+        font-size: 17px;
+        margin: 20px auto;
+    }
+}
+
+
+/*formulario de reserva */
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--dark);
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+input[type=date],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--dark);
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+input[type=number],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--dark);
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+
+/* Diseñe la etiqueta para que se muestre junto a las entradas */
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+
+/* Style del botón de enviar */
+
+button{
+    background-color: var(--dark);
+    color: #F5F5F5;
+}
+
+
+/* Style del container */
+
+.container {
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    background-color: #F5F5F5;
+    padding: 50px;
+}
+
+.container h2{
+    background-color: var(--dark);
+    color: #F5F5F5;
+    text-align: center;
+}
+
+
+/* Columna flotante para etiquetas: 25% de ancho */
+
+.col-25 {
+    font-weight: 600;
+    float: left;
+    width: 40%;
+    margin-top: 6px;
+}
+
+
+/* Columna flotante para entradas: 75% de ancho */
+
+.col-75 {
+    float: left;
+    width: 60%;
+    margin-top: 6px;
+}
+
+
+/* Limpiar flotadores después de las columnas. */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Diseño responsivo: cuando la pantalla tiene menos de 600 píxeles de ancho, 
+haga que las dos columnas se apilen una encima de la otra en lugar de una al 
+lado de la otra */
+@media screen and (max-width: 600px) {
+    .col-25,
+    .col-75,
+    buttton {
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        border-radius: 5px;
+        width: 90%;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        padding: 10px;
+    }
+}
+
+
+/* footer */
+
+.footer {
+    background: var(--dark);
+    color: #fff;
+    text-align: center;
+}
+
+.footer-container {
+    width: 85vw;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.footer-container p,
+.footer-container a,
+.footer-container span {
+    opacity: 0.8;
+}
+
+.footer a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.social-icons li {
+    margin: 0 10px;
+    width: 50px;
+    height: 50px;
+    background: #D3A5A1;
+    border-radius: 50%;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.social-icons li:hover {
+    background: #F5F5F5;
+    color: var(--dark);
+}
+
+.contact-item span {
+    display: block;
+}
+
+.footer-bottom {  
+    color: #F5F5F5; 
+    text-align: center; 
+    padding: 10px 0; 
+    margin-top: auto; 
+    position: relative; 
+    bottom: 20px; 
+}
+
+@media(min-width: 900px) {
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+@media(min-width: 1170px) {
+    .footer {
+        text-align: left;
+    }
+    .footer-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .footer-container div:nth-child(1) p {
+        padding-right: 20px;
+    }
+    .contact-item {
+        display: grid;
+        grid-template-columns: 10% 90%;
+        margin-bottom: 15px;
+        align-items: center;
+    }
+}

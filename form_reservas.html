@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="es">
+    <meta charset="utf-8">
+    <title>HOTEL NOOR-LOGIN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles_form_reservas.css">
+    <link rel="icon" href="images/loma_encantada.jpg" type="image/jpg">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <div class="head-top">
+            <div class="site-name">
+                <p>POSADA LOMA ENCANTADA</p>
+            </div>
+        </div>
+    </header>
+    <!-- fin del header -->
+
+   <!-- formulario de reserva -->
+    <div class="container">
+        <h2>RESERVACIÓN DE HABITACIONES</h2>
+        <form method="post" action="php/registro_habitacion.php">
+            <div class="row">
+                <div class="col-25">
+                    <label for="cedula">Cédula:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="cedula" name="cedula" pattern="\d+" inputmode="numeric" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="nombres">Nombres:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="nombres" name="nombres" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="apellidos">Apellidos:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="apellidos" name="apellidos" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="fecha_entrada">Fecha de entrada:</label>
+                </div>
+                <div class="col-75">
+                    <input type="date" id="fecha_entrada" name="fecha_entrada" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="fecha_salida">Fecha de salida:</label>
+                </div>
+                <div class="col-75">
+                    <input type="date" id="fecha_salida" name="fecha_salida" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="cant_adultos">Cantidad de adultos:</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" min = "1" max="4" value = "0" id="cant_adultos" name="cant_adultos" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="cant_ninos">Cantidad de niños:</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" min = "0" max="4" value = "0" id="cant_ninos" name="cant_ninos" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="tipo_habitacion">Tipo de habitación:</label>
+                </div>
+                <div class="col-75">
+                    <select id="tipo_habitacion" name="tipo_habitacion" required>
+                        <option value="">Seleccione</option>        
+                        <option value="sencilla">Habitación sencilla</option>
+                        <option value="doble">Habitación doble</option>
+                        <option value="Paraiso Andino">Habitación Paraíso Andino</option>
+                        <option value="Refugio del Colibri">Habitación Refugio del Colibrí</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="correo">Correo electrónico:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="correo" name="correo" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="telefono">Teléfono:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="telefono" name="telefono" pattern="\d+" inputmode="numeric" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="servicios_adicionales">Servicios adicionales:</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="servicios_adicionales" name="servicios_adicionales" required style="height:100px"></textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <button>Reservar</button>
+            </div>
+        </form>
+    </div>
+    <!-- fin de formulario de reserva -->
+
+    <!-- footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div>
+                <h2>Acerca de nosotros</h2>
+                <p>En Posada Loma Encantada, nos dedicamos a brindar a nuestros huéspedes una experiencia inolvidable en el corazón del Páramo Andino, Mérida. Con una mezcla perfecta de hospitalidad tradicional y comodidad moderna, nuestro objetivo es ofrecer un refugio acogedor donde puedas relajarte y disfrutar de la belleza natural que nos rodea.</p>
+                <ul class="social-icons">
+                    <li class="flex">
+                        <a href="#" target="_blank" class="whatsapp-link"> <i class="fab fa-whatsapp"></i></a>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.facebook.com/100095496544440" target="_blank" class="facebook-link"> <i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.instagram.com/" target="_blank" class="instagram-link"> <i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Menú</h2>
+                <a href="#header">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#habitaciones">Habitaciones</a>
+                <a href="#sabores">Sabores Andinos</a>
+            </div>
+
+            <div>
+               <h2>Servicios</h2>
+               <p>Servicios de comida y bebidas.</p>
+               <p>Paseos turísticos.</p>
+               <p>Internet Wifi y TV por cable.</p>
+               <p>Estacionamiento.</p>
+            </div>
+
+            <div>
+                <h2>Contáctos</h2>
+                <div class="contact-item">
+                    <span><i class = "fas fa-map-marker-alt"></i></span>
+                    <span>La Mucuchache, Páramo Edo. Mérida Venezuela</span>
+                </div>
+                <div class="contact-item">
+                    <span><i class = "fas fa-phone-alt"></i></span>
+                    <span>+58 777 888 99 00</span>
+                </div>
+                <div class="contact-item">
+                    <span><i class = "fas fa-envelope"></i></span>
+                    <span>posadalomaencantada@gmail.com</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom"> &copy; 2024 Posada Loma Encantada | Todos los derechos reservados </div>
+    </footer>
+    <!-- fin del footer -->
+</body>
+
+</html>
